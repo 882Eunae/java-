@@ -28,6 +28,7 @@ public class Todo {
 		
 	} else if(num==4) {
 		
+		return false;
 		//종료 
 		
 	}
