@@ -6,7 +6,7 @@ import java.util.Scanner; //단축키 ctrl +shift + o
 public class Todo {
 	public static void main(String[] args) {	
 	Scanner scn =new Scanner(System.in); 
-	int balance=0;
+	int balance=0; //예금액 
 	
 	while(true) {
 	System.out.println("1.입금 2.출금 3.잔액조회 4.종료");
@@ -28,8 +28,9 @@ public class Todo {
 		
 	} else if(num==4) {
 		
-		//종료 
 		
+		
+		//종료 
 	}
 	
 	
