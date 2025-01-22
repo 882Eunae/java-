@@ -36,9 +36,7 @@ public class Todo {
 				if (balance < 0) {
 					balance = before;
 					System.out.println("잔액을 확인하세요");
-
 				}
-
 				else {
 					balance = balance;
 					before = balance; // before를 지금 값으로 저장
