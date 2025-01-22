@@ -5,7 +5,7 @@ import java.util.Scanner;
 /*
  * 친구정보관리
  * 이름,연락처,성별,남여  => 홍길동,010-1234-5678,남 
- * 1.목록 (이름 ,연락처 ,성별) 2.등록 3.조회(성별) 4.삭제(이름) 9종료 
+ * 1.목록 (이름 ,연락처 ,성별) 2.등록 3.조회(성별) 4.삭제(이름)5수정  9종료 
  * 
 */
 public class Todo2 {
@@ -47,6 +47,9 @@ public class Todo2 {
 					}
 
 				}
+				
+				System.out.println("===============================");
+				break;
 
 			case 2:
 
@@ -120,21 +123,55 @@ public class Todo2 {
 				
 				
 			case 5: 
-					System.out.println("전화번호수정할 사람과 전화번호 (,)꼴로 입력하세요");
+					System.out.println("전화번호수정할 사람을 입력하세요");
 					String  revise=scn.nextLine();
-					
+					System.out.println("바꾸실분의 (이름,수정할 전화번호,성별) 를 주어진 양식대로 입력하세요")
+					;
+					String revisePhone=scn.nextLine();
+					System.out.println();
 					for(int i=0; i<friendAry.length; i++) {
 						
-						if(revise.split(",")[0]==friendAry[i].split(",")[0]) {
+//						if(friendAry[i] !=null) {
+//						
+//						if(revise.split(",")[0]==friendAry[i].split(",")[0]) {
+//							
+//							System.out.printf("수정할 사람의 이름:%s",revise.split(",")[0]);
+//							
+//							
+//						}
+//						
+//						}  else if(friendAry[i]==null) {
+//							
+//							System.out.println("null 입니다");
+//							
+//						}
+						
+						if (friendAry[i] != null) {
+							if(friendAry[i].split(",")[0].equals(revise)) {
+								
+								
+								friendAry[i]=null; 
+								System.out.println("요청하신 정보 수정요청 되었습니다");
+								friendAry[i]=revisePhone; 
+								System.out.println("수정이 완료되었습니다 ");
+							}
+							
 							
 							
 							
 							
 						}
+
+						else if (friendAry[i] == null) {
+							
+//							System.out.print("null");
+							
+						}
 						
 						
 						
-					}
+						
+					}//for문 끝나는 시점 
 					
 				
 				
