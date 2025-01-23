@@ -39,7 +39,7 @@ public class Book {
 		this.writer = writer;
 		this.company = company;
 		this.price=price;
-	}
+	}//
 
 	
 	

@@ -37,6 +37,6 @@ public class Student {
 		return (engScore + mathScore) / 2.0; // (88 +89)/ 2 
 	}
 
-	
+	//
 
 }

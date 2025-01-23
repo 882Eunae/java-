@@ -38,5 +38,5 @@ public class ReferenceExe1 {
 	}
 	private void method2() {
 		System.out.println("method2()이 호출 되었습니다");
-	}
+	}//
 }
