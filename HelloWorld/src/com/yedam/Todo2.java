@@ -24,8 +24,8 @@ public class Todo2 {
 
 			System.out.println("1.목록(이름,연락처,성별)  2등록 3.조회(성별) 4삭제  9.종료");
 			System.out.println("선택하세요>");
+			
 			int menu = Integer.parseInt(scn.nextLine());
-
 			switch (menu) {
 			case 1:
 				System.out.println("이름   전화번호  성별 ");
