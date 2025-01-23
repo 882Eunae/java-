@@ -64,8 +64,5 @@ public class Reference2 {
 		
 	}//end of main
 
-	private static int parseInt(String string) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 }

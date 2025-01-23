@@ -43,16 +43,10 @@ public static void main(String[] args) {
 					System.out.printf("%s %s %s\n", name, phone, gender);
 
 				}
-				
-					
-
 			}
-			
 			System.out.println("===============================");
 			break;
-
 		case 2:
-
 			System.out.println("이름을 입력>>");
 			String name=scn.nextLine();
 			System.out.println("연락처를 입력>>");
@@ -71,7 +65,6 @@ public static void main(String[] args) {
 						System.out.printf("등록이 완료되었습니다 %d 자리에 저장됨",i);
 						break; 
 					}
-			
 			}
 
 //			System.out.printf("총 %d명의 정보가 등록되어있습니다\n", num);
@@ -125,63 +118,27 @@ public static void main(String[] args) {
 			break;
 			
 			
-//		case 5: 
-//				System.out.println("바꾸실분의 이름을 입력>>")
-//				String  reviseName=scn.nextLine();
-//				System.out.println("바꿀 전화번호를 입력>>")
-//				String  revisePhone=scn.nextLine();
-//			System.out.println("성별을 입력>>")
-//				String reviseGen=scn.nextLine();
-//				
+	case 5: 
+				System.out.println("바꾸실분의 이름을 입력>>");
+				String  reviseName=scn.nextLine();
+				System.out.println("바꿀 전화번호를 입력>>");
+				String  revisePhone=scn.nextLine();
+				for(int i=0; i<friendAry.length; i++) {
+					if(friendAry[i] !=null && friendAry[i][0] !=null) {
+					
+				if(friendAry[i][0] .equals(reviseName) ) {
+					
+						friendAry[i][2]=revisePhone;
+						
+						System.out.println("%s 님의 전화번호가 %s로 무사히 수정 되었습니다",reviseName,revisePhone);
+						
+					}
+					}  
+
+					}
+			//for문 끝나는 시점 
 			
-//				for(int i=0; i<friendAry.length; i++) {
-//					
-////					if(friendAry[i] !=null && friendAry[i][0] !=null) {
-////					
-////					if(revise.split(",")[0]==friendAry[i].split(",")[0]) {
-////						
-////						System.out.printf("수정할 사람의 이름:%s",revise.split(",")[0]);
-////						
-////						
-////					}
-////					
-////					}  else if(friendAry[i]==null) {
-////						
-////						System.out.println("null 입니다");
-////						
-////					}
-//					
-//					if (friendAry[i] != null) {
-//						if(friendAry[i].split(",")[0].equals(revise)) {
-//							
-//							
-//							friendAry[i]=null; 
-//							System.out.println("요청하신 정보 수정요청 되었습니다");
-//							friendAry[i]=revisePhone; 
-//							System.out.println("수정이 완료되었습니다 ");
-//						}
-//						
-//						
-//						
-//						
-//						
-//					}
-//
-//					else if (friendAry[i] == null) {
-//						
-////						System.out.print("null");
-//						
-//					}
-//					
-//					
-//					
-//					
-//				}//for문 끝나는 시점 
-//				
-//			
-//			
-//			
-//			break;
+			//break;
 			
 		case 9:
 			System.out.println("end of pro");
@@ -197,7 +154,7 @@ public static void main(String[] args) {
 	//ㅠㅠㅠ 
 	System.out.println("프로그램 종료 ");
 
-	
+	// ...
 	
 	
 	
