@@ -20,6 +20,8 @@ package com.yedam.reference;
 
 
 
+
+
 public class Book {
 	// 필드 (속성):이름,영어,수학
 	String name;
