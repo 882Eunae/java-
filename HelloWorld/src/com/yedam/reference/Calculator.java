@@ -1,5 +1,7 @@
 package com.yedam.reference;
 
+import java.util.Date;
+
 public class Calculator {
 	//1월달 출력. 
 	public void showCalendar() {
@@ -11,9 +13,20 @@ public class Calculator {
 		
 		System.out.println("\n----------------------------------");
 		
-		//공백,말일 계산 
+		//공백,말일 계산
+		
+		Date now=new Date();
+		
 		int space=3;
 		int lastDate=31;
+		String[]dateAry=new String[space+lastDate];
+		for(int i=0; i<dateAry.length; i++) {
+			if(i<space) {
+				dateAry[i]="";
+			} else {
+				dateAry[i]=""+(i-1-space);
+			}
+		}
 		
 		for(int i=0; i<space; i++) {
 			
@@ -23,31 +36,18 @@ public class Calculator {
 		
 		for(int i=1; i<=lastDate; i++) {
 			if((space+i)%7==0) {//토요일
-				
 				System.out.printf("%4d",i);
 				System.out.println();
 			}
 			//토요일이 아닌경우
 			else {
-				
-				if(i<11) {
-					
 					System.out.printf("%5d",i);
-				}
-				
-				else {
-				System.out.printf("%5d",i);}
 			}
 			
 			
 		}//마지막 날까지 쓰기 
 		
-		
-		
 	}
-	
-	
-	
 
 	public Book getBookInfo(String btitle, Book[] bookAry) {
 		Book[] bookRepo = { new Book("이것이자바다", "신용권", "한빛미디어", 10000), new Book("자바스크립트 기초", "김자바", "자바출판사", 15000),
