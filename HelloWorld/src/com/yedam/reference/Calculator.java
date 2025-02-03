@@ -137,5 +137,5 @@ public class Calculator {
 
 		return sum1 > sum2 ? sum1 : sum2;
 	}
-//ㅠㅠㅠㅠ...
+//ㅠㅠㅠㅠ......
 }// class
