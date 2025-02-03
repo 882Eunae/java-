@@ -1,7 +1,7 @@
 package com.yedam;
 
 import java.util.Scanner;
-
+//커밋....
 public class Todo3 {
 public static void main(String[] args) {
 	String[][] friendAry = new String[100][3];
