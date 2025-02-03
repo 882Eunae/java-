@@ -17,8 +17,8 @@ public class Calculator {
 		
 		Date now=new Date();
 		
-		int space=3;
-		int lastDate=31;
+		int space=0;
+		int lastDate=30;
 		String[]dateAry=new String[space+lastDate];
 		for(int i=0; i<dateAry.length; i++) {
 			if(i<space) {
@@ -26,7 +26,7 @@ public class Calculator {
 			} else {
 				dateAry[i]=""+(i-1-space);
 			}
-		}
+		}//end of for 
 		
 		for(int i=0; i<space; i++) {
 			
@@ -45,7 +45,7 @@ public class Calculator {
 			}
 			
 			
-		}//마지막 날까지 쓰기 
+		}//end of for  마지막 날까지 쓰기 
 		
 	}
 
