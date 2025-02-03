@@ -130,7 +130,7 @@ public static void main(String[] args) {
 					
 						friendAry[i][2]=revisePhone;
 						
-						System.out.println("%s 님의 전화번호가 %s로 무사히 수정 되었습니다",reviseName,revisePhone);
+						System.out.printf("%s 님의 전화번호가 %s로 무사히 수정 되었습니다",reviseName,revisePhone);
 						
 					}
 					}  

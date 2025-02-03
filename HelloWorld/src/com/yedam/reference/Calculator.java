@@ -10,8 +10,13 @@ public class Calculator {
 		for(String day:days) {
 			System.out.printf(" %4s",day);
 		}
+		
 		System.out.println("\n----------------------------------");
+		
 		//공백,말일 계산
+		
+		Date now=new Date();
+		
 		int space=3;
 		int lastDate=31;
 		String[]dateAry=new String[space+lastDate];
@@ -36,14 +41,16 @@ public class Calculator {
 			}
 			//토요일이 아닌경우
 			else {
-					System.out.printf("%5d",i);}
-			}//for문끝 
+					System.out.printf("%5d",i);
+			}
+			
+			
+		}//마지막 날까지 쓰기 
 		
-	}//end of showCalendar 
+	}
 
 	public Book getBookInfo(String btitle, Book[] bookAry) {
-		Book[] bookRepo = { new Book("이것이자바다", "신용권", "한빛미디어", 10000),
-				new Book("자바스크립트 기초", "김자바", "자바출판사", 15000),
+		Book[] bookRepo = { new Book("이것이자바다", "신용권", "한빛미디어", 10000), new Book("자바스크립트 기초", "김자바", "자바출판사", 15000),
 				new Book("혼자공부하는자바", "혼공자", "한빛미디어", 20000) };
 		// 배열검색
 		for (int i = 0; i < bookAry.length; i++) {
@@ -130,5 +137,5 @@ public class Calculator {
 
 		return sum1 > sum2 ? sum1 : sum2;
 	}
-
+//ㅠㅠㅠㅠ...
 }// class
