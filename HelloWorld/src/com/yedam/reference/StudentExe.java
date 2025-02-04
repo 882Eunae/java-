@@ -1,5 +1,5 @@
 package com.yedam.reference;
-
+//gender => Men , Women 
 import java.util.Scanner;
 
 public class StudentExe {
@@ -10,6 +10,7 @@ public class StudentExe {
 //		std1.studentName="홍길동"; 
 		std1.engScore=80;
 		std1.mathScore=85;
+		std1.gender=Gender.MEN;
 		
 		Student std2 =new Student();
 		std2.studentName="김민수"; 
@@ -17,12 +18,14 @@ public class StudentExe {
 		std2.engScore=70;
 		students[0]=std1;
 		students[1]=std2;
+		std2.gender=Gender.MEN;
 	
 		Student std3=new Student();
 		std3.studentName="홍정학";
 		std3.mathScore=75;
 		std3.engScore=90; 
 		students[2]=std3;
+		std3.gender=Gender.WOMEN;
 		
 		System.out.println(students[0] instanceof Student);
 		
@@ -33,9 +36,9 @@ public class StudentExe {
 		System.out.println("평균점수를 구할 학생의 이름을 입력하세요>>");
 		String stuName=scn.nextLine();
 		double average=0;
-		for(int i=0; i<students.length;i++) {
-			
-			if(students[i] !=null) {
+		for(int i=0; i<students.length;i++) {			
+			if(students[i] !=null 
+					&& students[i].gender == Gender.MEN) {
 				if(students[i].studentName.equals(stuName)) {	
 					average=students[i].getAverage();
 					System.out.printf("평균은 %.2f 입니다\n",average);

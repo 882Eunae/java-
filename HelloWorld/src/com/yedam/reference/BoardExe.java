@@ -128,7 +128,8 @@ public class BoardExe {
 
 			}
 			
-			 else if(exist==true){System.out.println("이미 있는 제목입니다");}
+			 else if(exist==true)
+			 {System.out.println("이미 있는 제목입니다");}
 
 		}
 

@@ -2,10 +2,11 @@ package com.yedam.reference;
 
 public class Student {
 	// 필드 (속성):이름,영어,수학
-	String studentName;
-	int engScore;
-	int mathScore;
-
+	 String studentName;
+	 int engScore;
+	 int mathScore;
+	 
+	Gender gender;
 	// 생성자: 필드의 초기값을 지정해서 인스턴스 생성
 	Student() {
 
@@ -37,6 +38,23 @@ public class Student {
 		return (engScore + mathScore) / 2.0; // (88 +89)/ 2 
 	}
 
-	//
+	public Gender getGender() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+	
+	public void setEngScore(int engScore) {
+		if(engScore <0) {
+			this.engScore=0;
+		} else {
+			this.engScore=engScore;
+		}
+		
+	}
+
+	
 
 }
