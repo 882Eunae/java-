@@ -178,7 +178,6 @@ public class FriendExe {
 		scn.nextLine();
 		String target = scn.nextLine();
 		for (int i = 0; i < friends.length; i++) {
-			System.out.println("for문 작동중...");
 			
 			if (friends[i] !=null && friends[i].getFriendName().equals(target) ) {
 				System.out.println("어떤 번호로 수정하시겠습니까?");

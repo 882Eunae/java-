@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class DateExe {
 	public static void main(String[] args) {
-	//date 기능 
+	//date 기능
 	SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); 
 	Date now=new Date();
 	System.out.println(sdf.format(now));

@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class ForLoop2 {
 
-	public static void main(String[] args) {
+	public static <String> void main(
+			String[] args) {
 //		
 //		(infoAry[0]); 
 //		System.out.println(Integer.parseInt(infoAry[1]));

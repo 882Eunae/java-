@@ -22,8 +22,8 @@ public class snack {
 	public void showSnack(snack[] snackstore,int i) {
 		
 		System.out.println(snackstore[i].name+"   "+snackstore[i].price+"   "+snackstore[i].expiry+"   "+snackstore[i].brand);
-		
-		
+
+		System.out.println("과자먹고싶다");
 		
 		
 	}

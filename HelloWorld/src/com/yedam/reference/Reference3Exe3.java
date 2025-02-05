@@ -36,8 +36,6 @@ public class Reference3Exe3 {
 			} 
 			
 			
-			
-			
 		}//for 문 끝 
 		
 		//

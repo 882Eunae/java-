@@ -27,11 +27,8 @@ public class BookExe {
 				String company = bookRepository[i].getCompany();
 				int price = bookRepository[i].getPrice();
 
-				// System.out.printf("%s %s %s %d",name,writer,company,price);
-
 				System.out.println(bookRepository[i].showBookInfo());
 			}
-
 		} // for문 모두확인 함
 		System.out.println("==============================================");
 		System.out.println("책정보를 모두 확인함!");
@@ -78,10 +75,9 @@ public class BookExe {
 			} // null 이 아닐때 실행 if끝
 		}
 		System.out.println("===========================================");
-
 		
 		
-		
+	
 	}// end of searchList() 
 	
 	//가격수정
@@ -109,15 +105,13 @@ public class BookExe {
 	}//end of modifyBook
 	
 	//상세조회
-	public static void showDetail() {
-		
+	public static void showDetail() {	
 		System.out.println("도서명 입력>>");
 		String search = scn.nextLine(); 
 		Calculator cal=new Calculator();
 		cal.getBookInfo(search, bookRepository).showDetailInfo();
-
 		
-		
+	
 	}//end of showDetail()
 	
 	

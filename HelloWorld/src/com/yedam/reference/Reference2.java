@@ -1,10 +1,12 @@
-
+package com.yedam.reference;
+//....
 import java.util.Scanner;
 
 public class Reference2 {
 
 	public static void main(String[] args) {
 		String[][] nameAry=new String[5][2];
+		//...
 		nameAry[0][0]="홍길동";
 		nameAry[0][1]="80";
 		nameAry[1][0]="김민수";
@@ -36,7 +38,6 @@ public class Reference2 {
 				maxPer=nameAry[i][0];
 				
 			}
-			
 		}
 		
 		System.out.printf("가장 큰 점수 : %d 사람 : %s \n",max,maxPer);
@@ -45,23 +46,13 @@ public class Reference2 {
 		
 		
 		for (int j = 0; j < nameAry.length; j++) {
-	
 				info=scn.nextLine(); //한번만 물어봄 
 				String name=info.split(",")[0];
 				String score=info.split(",")[1];
-			
 				nameAry[j][0]=name;
 				nameAry[j][1]=score; 		
 		}
-		
-		
-		//
-		
-		
-//		System.out.printf(nameAry[4][0]);
-//		System.out.printf(nameAry[4][1]);
-//		
-		
+
 	}//end of main
 
 	
