@@ -16,7 +16,7 @@ public class Student {
 		this.studentName = studentName;
 	}
 
-	Student(String studentName, int engScore) {
+	 public Student(String studentName, int engScore) {
 		this.studentName = studentName;
 		this.engScore = engScore;
 	}
@@ -31,6 +31,20 @@ public class Student {
 	void printInfo() {
 		System.out.printf("이름은 %s, 영어점수 %d, 수학점수 %d\n", studentName, engScore, mathScore);
 
+	}
+	
+	
+
+	public String getStudentName() {
+		return studentName;
+	}
+
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+
+	public int getEngScore() {
+		return engScore;
 	}
 
 	// 기능추가: 평균을 반환.
@@ -54,6 +68,8 @@ public class Student {
 		}
 		
 	}
+
+	
 
 	
 

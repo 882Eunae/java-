@@ -6,8 +6,8 @@ package com.yedam.Inheritance;
  *  oracleDao -> register ,remove ,search
  */
 public abstract class Dao {
-	//등록 
 	
+	//등록 
 	public abstract void register();
 	
 	public abstract void remove();
