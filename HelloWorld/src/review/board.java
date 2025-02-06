@@ -1,3 +1,5 @@
+package review;
+
 import java.util.Date;
 
 public  class board {
@@ -38,6 +40,10 @@ public  class board {
 	}
 	public void setWriteDate(Date writeDate) {
 		this.writeDate = writeDate;
+	}
+	public void showboard() {
+		// TODO Auto-generated method stub
+		
 	} 
 	
 	

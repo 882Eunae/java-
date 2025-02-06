@@ -1,5 +1,8 @@
 package com.yedam.interfac.emp;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 /*
  * 배열활용
  */
@@ -21,13 +24,13 @@ public class EmpAryExe implements EmpDAO {
 	public boolean registerEMP(Employee emp) {
 
 		for (int i = 0; i < employees.length; i++) {
-
+			//빈공간에 추가 
 			if (employees[i] == null) {
 				employees[i] = emp;
 				return true;
 			}
 		}
-		return false;
+		return false; //등록실패 
 	}
 
 	// case 3
@@ -54,37 +57,43 @@ public class EmpAryExe implements EmpDAO {
 		int salary = emp.getMoney(); // 급여조건으로함
 		int idx = 0;
 		for (int i = 0; i < employees.length; i++) {
-			if (employees[i] != null && employees[i].getMoney() > salary) {
+			if (employees[i] != null && employees[i].getName().indexOf(emp.getName())!=-1) {
 				search[idx] = employees[i];
 				idx++;
 			}
-		}
+		}//end of for 
 		return search;
 	}
 
 	@Override
 	public boolean modifyEmp(Employee emp) {
 
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd"); 
 		for (int i = 0; i < employees.length; i++) {
 
-			if (employees[i].getNum() == emp.getNum()) {
-
-				if (!emp.getTel().equals("")) {
-
-					employees[i].setTel(emp.getTel());
+			if (employees[i].getNum() == emp.getNum()&& employees[i]!=null)
+					 {
+				//연락처값이 ""이 아닐때 변경 
+				if(!emp.getTel().equals("")) {
+				employees[i].setTel(emp.getTel());
+				}
+				try {
+					//값을 변경안하려고 엔터("")일 경우 1900-01-01  
+					if(emp.getDate().equals(sdf.parse("1900-01-01"))) {
+					employees[i].setDate(emp.getDate());
+					}
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
 				
-				if(employees[i].getMoney()!=0) {
-					employees[i].setMoney(emp.getMoney());
+				
+				if(emp.getMoney()!=0) {
+				employees[i].setMoney(emp.getMoney());
 				}
-				return true;
+				return true; // 정상수정.
+			}
+		}
+		return false; // 수정못함.
 
-			} // end of if
-
-		} // end of for
-
-		return false;
-
-	}// end of modify
-
-}
+}}

@@ -1,5 +1,6 @@
 package com.yedam.interfac.emp;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
@@ -10,29 +11,47 @@ import java.util.Scanner;
  */
 
 public class MainExe {
+
+	static Scanner scn = new Scanner(System.in);
+	static EmpDAO dao = new EmpAryExe();
+
 	public static void main(String[] args) {
 
 		// 스캐너,run
-		Scanner scn = new Scanner(System.in);
 		boolean run = true;
 
 		// 배열,컬렉션
-		EmpDAO dao = new EmpAryExe();
 
 		while (run) {
 			System.out.println("1.추가 2.수정 3.삭제 4.조회9.종료");
 			System.out.println("선택>> ");
+			int menu = 0;
 
-			int menu = scn.nextInt();
+			try {
+				menu = scn.nextInt();
+			} catch (InputMismatchException e) {
+				// 정상실행이 진행되도록 구성.
+				System.out.println("메뉴를 확인하세요.");
+				scn.nextLine();
+				continue; // 아래쪽으로 안가고 다시 처음부터 실행
+			}
+
 			scn.nextLine();
-
 			switch (menu) {
-
 			case 1: // 추가 사원번호 이름 전화번호
-				System.out.println("사원번호");
-				int empNo = Integer.parseInt(scn.nextLine());
+				int empNo = 0;
+				while (true) {
+					System.out.println("사원번호>>");
+					try {
+						empNo = Integer.parseInt(scn.nextLine());
+						break; // while문 종료
+					} catch (NumberFormatException e) {
+						System.out.println("다시 사원번호를 입력하세요");
+					}
+				} // end of while
 				System.out.println("이름>>");
 				String eName = scn.nextLine();
+
 				System.out.println("전화번호>>");
 				String tel = scn.nextLine();
 
@@ -71,11 +90,11 @@ public class MainExe {
 
 				break;
 			case 3:
-				System.out.println("사원번호");
-				empNo = Integer.parseInt(scn.nextLine());
-
-				if (dao.removeEMP(empNo)) {
-					System.out.println("삭제완료");
+				try {
+					remove();
+				}
+				catch(NumberFormatException e) {
+					System.out.println("사원번호 확인");
 				}
 				break;
 
@@ -83,7 +102,7 @@ public class MainExe {
 				// 조회조건(급여 이상)
 
 				System.out.println("조회 급여조건 >> ");
-				sal=Integer.parseInt(scn.nextLine());  
+				sal = Integer.parseInt(scn.nextLine());
 
 				System.out.println("조회 이름조건 >>");
 				String name = scn.nextLine();
@@ -116,4 +135,15 @@ public class MainExe {
 		System.out.println("end of prog");
 
 	}// end of main
+
+	// 예외 떠넘기기 예제. remove 호출한곳에서 예외를 처리하겠다  
+	static void remove() throws NumberFormatException{
+
+		System.out.println("사원번호");
+		int empNo = Integer.parseInt(scn.nextLine());
+		if (dao.removeEMP(empNo)) {
+			System.out.println("삭제완료");
+		}
+	}//end of remove 
+	
 }// end of class
