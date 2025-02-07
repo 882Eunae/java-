@@ -116,7 +116,7 @@ public class StudentApp {
 		}
 			System.out.println("saved.");
 	}// end of save
-	
+	//.....
 	//파일 읽어서 컬렉션저장 
 	public void init() {
 		
