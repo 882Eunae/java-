@@ -118,6 +118,7 @@ public class StudentApp {
 	}// end of save
 	//...... 
 	//commit 
+	//토큰 세로만듦
 	//파일 읽어서 컬렉션저장 
 	public void init() {
 		
