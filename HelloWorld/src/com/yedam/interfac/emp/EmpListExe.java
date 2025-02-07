@@ -51,16 +51,16 @@ public class EmpListExe implements EmpDAO {
 	
 	//case4
 	@Override
-	public Employee[] search(Employee emp) {
+	public List<Employee> search(Employee emp) {
 
-		Employee[] search=new Employee[10];
-		int idx = 0;
-		int salary=emp.getMoney();
+		List<Employee>search=new ArrayList<Employee>();
+		
+		//int salary=emp.getMoney();
 		
 		for (int i = 0; i < employees.size(); i++) {
 			if (employees.get(i).getName().indexOf(emp.getName())!=-1) {
-				search[idx]=employees.get(i);
-				idx++; 	
+				search.add(employees.get(i));
+				
 			}
 		}//end of for 
 		

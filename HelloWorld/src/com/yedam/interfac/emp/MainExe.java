@@ -1,6 +1,7 @@
 package com.yedam.interfac.emp;
 
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -109,9 +110,8 @@ public class MainExe {
 
 				Employee emp = new Employee();// 기본생성자
 				emp.setName(name); // emp의 sal 설정
-
 				// 조회결과
-				Employee[] result = dao.search(emp);
+				List<Employee> result = dao.search(emp);
 				// 출력
 				for (Employee empl : result) {
 					if (empl != null) {
