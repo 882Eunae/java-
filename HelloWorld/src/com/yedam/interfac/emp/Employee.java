@@ -3,7 +3,7 @@ package com.yedam.interfac.emp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+//참고 employee
 /*
  * 사원번호(1001,1002)
  * 사원이름(홍길동,김민수)

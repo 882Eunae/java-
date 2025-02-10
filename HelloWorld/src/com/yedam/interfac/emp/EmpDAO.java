@@ -2,6 +2,10 @@ package com.yedam.interfac.emp;
 
 import java.util.List;
 
+/*
+ * EmpAryExe,EmpListExe.java,EmpDBExe 
+ */
+
 public interface EmpDAO {
 
 //등록 	

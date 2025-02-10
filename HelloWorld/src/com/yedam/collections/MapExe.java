@@ -8,12 +8,11 @@ import java.util.Set;
 public class MapExe {
 	public static void main(String[] args) {
 	//키:값 => 엔트리 
-	Map<String,Integer> map=new HashMap<String,Integer>(); 
+	Map<String,Integer>map=new HashMap<String,Integer>(); 
 	map.put("홍길동", 90); 
 	map.put("김민수", 80);
 	map.put("박은수", 85);
 	map.put("김민수", 77); 
-	
 	
 	//키 => 값 반환 
 	Integer val=map.get("홍길동"); 
@@ -23,6 +22,7 @@ public class MapExe {
 	for(String key :keys) {
 		System.out.printf("키: %s, 값: %d\n",key,map.get(key));
 	}//end of for 
+	
 	
 	//키:값 (엔트리) 엔트리반환 
 	Set<Entry<String,Integer>> entry=map.entrySet(); 

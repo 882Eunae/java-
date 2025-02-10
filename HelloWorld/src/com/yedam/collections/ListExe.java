@@ -11,6 +11,7 @@ public class ListExe {
 		strList.add(new String("kildong")); 
 		strList.add(new String(new byte[] {77,108,108,111,96}));
 		
+		
 		strList.remove(0); //제거
 		strList.size(); //컬렉션크기. 
 		

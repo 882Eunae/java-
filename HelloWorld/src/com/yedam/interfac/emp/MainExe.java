@@ -11,10 +11,14 @@ import java.util.Scanner;
  * Employee, EmpAryExe,EmpListExe, EmpDAO(인터페이스)
  */
 
+//참고 main화면 
+
 public class MainExe {
+	
+	
 
 	static Scanner scn = new Scanner(System.in);
-	static EmpDAO dao = new EmpAryExe();
+	static EmpDAO dao = new EmpDBExe();
 
 	public static void main(String[] args) {
 
@@ -69,6 +73,7 @@ public class MainExe {
 
 				int editNo = Integer.parseInt(scn.nextLine());
 				System.out.println("전화번호>>");
+				
 				tel = scn.nextLine();
 				System.out.println("입사일자>>");
 				String hdate = scn.nextLine();
@@ -130,7 +135,7 @@ public class MainExe {
 
 			}
 
-		} // end of while
+		} // end of whilesys
 
 		System.out.println("end of prog");
 

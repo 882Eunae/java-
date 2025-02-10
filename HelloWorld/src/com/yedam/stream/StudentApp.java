@@ -65,8 +65,11 @@ public class StudentApp {
 	}// end of studentList
 
 	public void addStudent() {
+		
+		
 		System.out.println("학생이름 입력>>");
 		String name = scn.nextLine();
+		
 		System.out.println("학생키 입력>>");
 		double height = Double.parseDouble(scn.nextLine());
 		System.out.println("학생몸무게 입력>>");
