@@ -12,6 +12,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * EmpDAO 구현하는 클래스 
+ */
 public class EmpDBExe implements EmpDAO{
 	Connection getConnect() throws SQLException {
 	String url="jdbc:oracle:thin:@localhost:1521:xe"; //오라클 디비 접속정보.
@@ -58,7 +61,9 @@ public class EmpDBExe implements EmpDAO{
 		List<Employee> empList=new ArrayList<>(); 
 		try {
 			Statement stmt=getConnect().createStatement();
-			ResultSet rs=stmt.executeQuery("select * from tbl_employees");
+			ResultSet rs=stmt.executeQuery("select * from tbl_employees "+
+										"where emp_name = nvl('"+emp.getName()+"',emp_name) "
+										+"order by emp_no");
 			//조회결과
 			while(rs.next()) {
 				Employee empl=new Employee();
@@ -68,7 +73,7 @@ public class EmpDBExe implements EmpDAO{
 				empl.setMoney(rs.getInt("salary"));
 				empl.setTel(rs.getString("tel_no"));
 				
-				empList.add(emp);
+				empList.add(empl);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

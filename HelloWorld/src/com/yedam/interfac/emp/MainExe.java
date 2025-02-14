@@ -14,8 +14,6 @@ import java.util.Scanner;
 //참고 main화면 
 
 public class MainExe {
-	
-	
 
 	static Scanner scn = new Scanner(System.in);
 	static EmpDAO dao = new EmpDBExe();
@@ -106,9 +104,6 @@ public class MainExe {
 
 			case 4: // 목록
 				// 조회조건(급여 이상)
-
-				System.out.println("조회 급여조건 >> ");
-				sal = Integer.parseInt(scn.nextLine());
 
 				System.out.println("조회 이름조건 >>");
 				String name = scn.nextLine();
